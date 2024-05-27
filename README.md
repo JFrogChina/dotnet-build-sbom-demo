@@ -1,7 +1,7 @@
 # The Demo project is C# code. This project downloads nuget dependency packages through Artifactory Server through the jf command line, uploads the build dependency information to JFrog, scans the dependency packages through JFrog Xray, and obtains the SBOM report.
 
 
-1，Create nuget remote repo in JFrog Server
+# 1，Create nuget remote repo in JFrog Server
 
 ![Create Remote Nuget repo](images/1.1.jpg)
 ![Create Remote Nuget repo](images/1.2.jpg)
@@ -11,16 +11,16 @@
 
 
 
-2，Install the JFrog CLI tool in a system with .Net environment
+# 2，Install the JFrog CLI tool in a system with .Net environment
 
-(1),Demo environment uses centos7 operating system, install .net 7.0SDK
+## (1),Demo environment uses centos7 operating system, install .net 7.0SDK
 ```
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
 sudo yum update
 sudo yum install -y dotnet-sdk-7.0
 ```
 
-(2),Install JFrog CLI
+## (2),Install JFrog CLI
 ```
 echo "\[jfrog-cli\]" > jfrog-cli.repo;
 echo "name=jfrog-cli" >> jfrog-cli.repo;
@@ -32,7 +32,7 @@ yum install -y jfrog-cli-v2-jf;
 ```
  JFrog CLI Installation Docs:[JFrog CLI installation](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/install)).
 
-3，Set up JFrog CLI to connect to the JFrog 
+# 3，Set up JFrog CLI to connect to the JFrog 
 ```
 jf c add
 #Enter a unique server identifier:jfrogname
@@ -42,7 +42,7 @@ jf c add
 ```
  JFrog CLI Setup Docs:[JFrog CLI installation](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/cli-for-jfrog-artifactory/authentication).
 
-4，Set up JFrog CLI .net global environment
+# 4，Set up JFrog CLI .net global environment
 ```
 jf dotnetc --global
 #Resolve dependencies from Artifactory? (y/n) [y]? :y
@@ -52,7 +52,7 @@ jf dotnetc --global
 ```
  JFrog CLI Nuget build Docs:[JFrog CLI Nuget Env setup](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/cli-for-jfrog-artifactory/package-managers-integration#building-nuget-packages)).
 
-5，Clone .net project source code
+# 5，Clone .net project source code
 
 ```
 #Create a working directory and clone the code
@@ -61,7 +61,7 @@ cd ~/dotnet_work
 git clone https://github.com/JFrogChina/dotnet-build-sbom-demo.git
 ```
 
-6，Build .net project with JFrog CLI
+# 6，Build .net project with JFrog CLI
 
 ```
  cd dotnet-build-sbom-demo
@@ -69,22 +69,22 @@ git clone https://github.com/JFrogChina/dotnet-build-sbom-demo.git
 ```
  JFrog CLI Nuget build Docs:[JFrog CLI Nuget restore dependencies](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/cli-for-jfrog-artifactory/package-managers-integration#running-nuget-and-dotnet-commands).
  
-7，Upload build info to JFrog Server
+# 7，Upload build info to JFrog Server
 ```
  jf rt bp dotnet-build-sbom-demo 1
 ```
  JFrog CLI Nuget build Docs:[JFrog CLI Nuget publish Build-Info](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/cli-for-jfrog-artifactory/build-integration#publishing-build-info)
 
 
-8，Setup JFrog Xray index
+# 8，Setup JFrog Xray index
 
-（1），Turn on Xray index for  build info 
+## （1），Turn on Xray index for  build info 
 
 ![Trun on Xray index for build-info](images/8.1.jpg)
 ![Trun on Xray index for build-info](images/8.2.jpg)
 ![Trun on Xray index for build-info](images/8.3.jpg)
 
-（2），Run build again
+## （2），Run build again
 ```
 cd ~/dotnet_work
 cd dotnet-build-sbom-demo/
@@ -92,7 +92,7 @@ jf dotnet restore ./src/GraphQL.sln --build-name=dotnet-build-sbom-demo --build-
 jf rt bp dotnet-build-sbom-demo 2
 ```
 
-9，Export SBOM report in JFrog Website
+# 9，Export SBOM report in JFrog Website
 
 ![Export SBOM Report](images/9.1.jpg)
 ![Export SBOM Report](images/9.2.jpg)
