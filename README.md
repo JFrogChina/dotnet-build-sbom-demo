@@ -5,7 +5,7 @@
 ![Create Remote Nuget repo](images/1.2.jpg)
 ![Create Remote Nuget repo](images/1.3.jpg)
 
-To jump to the [JFrog Repo Create Docs][Create Nuget Remote Repo](https://jfrog.com/help/r/jfrog-artifactory-documentation/set-up-remote-nuget-repositories).
+ JFrog Repo Create Docs:[Create Nuget Remote Repo](https://jfrog.com/help/r/jfrog-artifactory-documentation/set-up-remote-nuget-repositories).
 
 
 
@@ -28,7 +28,7 @@ rpm --import https://releases.jfrog.io/artifactory/jfrog-gpg-public/jfrog\_publi
 sudo mv jfrog-cli.repo /etc/yum.repos.d/;
 yum install -y jfrog-cli-v2-jf;
 ```
-To jump to the [JFrog CLI Installation Docs](#[JFrog CLI installation](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/install)).
+ JFrog CLI Installation Docs:[JFrog CLI installation](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/install)).
 
 3，Set up JFrog CLI to connect to the JFrog 
 ```
@@ -38,31 +38,38 @@ jf c add
 #Username and Password :
 #Is the Artifactory reverse proxy configured to accept a client certificate? (y/n) [n]?n
 ```
-To jump to the [JFrog CLI Setup Docs](#[JFrog CLI installation](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/cli-for-jfrog-artifactory/authentication).
+ JFrog CLI Setup Docs:[JFrog CLI installation](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/cli-for-jfrog-artifactory/authentication).
 
 4，Set up JFrog CLI .net global environment
 ```
-jf c add
-#Enter a unique server identifier:jfrogname
-#JFrog Platform UR:https://jfrog.url.com
-#Username and Password :
-#Is the Artifactory reverse proxy configured to accept a client certificate? (y/n) [n]?n
+jf dotnetc --global
+#Resolve dependencies from Artifactory? (y/n) [y]? :y
+#Set Artifactory server ID [jfrogchina]: jfrogname
+#Set repository for dependencies resolution :nuget-remote
+#Use NuGet V2 Protocol? (y/n) [n]? :n
 ```
-To jump to the [JFrog CLI Nuget build Docs](#[JFrog CLI Nuget Env setup](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/cli-for-jfrog-artifactory/package-managers-integration#building-nuget-packages)).
+ JFrog CLI Nuget build Docs:[JFrog CLI Nuget Env setup](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/cli-for-jfrog-artifactory/package-managers-integration#building-nuget-packages)).
 
 5，Clone .net project source code
 
 ```
+#Create a working directory and clone the code
+mkdir  ~/dotnet_work
+cd ~/dotnet_work
 git clone https://github.com/JFrogChina/dotnet-build-sbom-demo.git
 ```
 
 6，Build .net project with JFrog CLI
 
 ```
-jf 
+cd dotnet-build-sbom-demo
+ jf dotnet build ./src/GraphQL.sln --build-name=dotnet-build-sbom-demo --build-number=1
 ```
 
 7，Upload build info to JFrog Server
+```
+ jf rt bp dotnet-build-sbom-demo 1
+```
 
 8，setup JFrog Xray index
 （1），Turn on Xray index for  build info 
