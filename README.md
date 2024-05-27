@@ -1,8 +1,16 @@
 
 1，Install the jfrog cli tool in a system with .Net environment
-一个在线编辑markdown文档的编辑器
+Demo environment uses centos7 operating system, install .net 7.0SDK
+···
+sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
+sudo yum update
+sudo yum install -y dotnet-sdk-7.0
+···
 
-To jump to the [Installation section](#installation).
+Install JFrog CLI
+
+
+To jump to the [Installation Docs](#[JFrog CLI installation](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/install)).
 
 2，Set up JFrog CLI to connect to the JFrog 
 
