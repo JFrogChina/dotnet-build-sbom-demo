@@ -1,5 +1,5 @@
 
-1，Create nuget remote repo in JFrog Server
+#1，Create nuget remote repo in JFrog Server
 
 ![Create Remote Nuget repo](images/1.1.jpg)
 ![Create Remote Nuget repo](images/1.2.jpg)
