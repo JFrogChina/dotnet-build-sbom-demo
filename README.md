@@ -63,18 +63,28 @@ git clone https://github.com/JFrogChina/dotnet-build-sbom-demo.git
 
 ```
 cd dotnet-build-sbom-demo
- jf dotnet build ./src/GraphQL.sln --build-name=dotnet-build-sbom-demo --build-number=1
+ jf dotnet restore ./src/GraphQL.sln --build-name=dotnet-build-sbom-demo --build-number=1
 ```
-
+ JFrog CLI Nuget build Docs:[JFrog CLI Nuget restore dependencies](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/cli-for-jfrog-artifactory/package-managers-integration#running-nuget-and-dotnet-commands).
+ 
 7，Upload build info to JFrog Server
 ```
  jf rt bp dotnet-build-sbom-demo 1
 ```
+ JFrog CLI Nuget build Docs:[JFrog CLI Nuget publish Build-Info](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/cli-for-jfrog-artifactory/build-integration#publishing-build-info)
+
 
 8，setup JFrog Xray index
 （1），Turn on Xray index for  build info 
+![Trun on Xray index for build-info](images/8.1.jpg)
+![Trun on Xray index for build-info](images/8.2.jpg)
 （2），Run build again
+```
+cd ~/dotnet_work
+jf dotnet restore ./src/GraphQL.sln --build-name=dotnet-build-sbom-demo --build-number=1
+jf rt bp dotnet-build-sbom-demo 2
+```
 
 9，Export SBOM report in JFrog Website
 
-![Export SBOM Report](images/example.png)
+![Export SBOM Report](images/9.1.png)
