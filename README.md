@@ -1,5 +1,6 @@
 
 1，Install the jfrog cli tool in a system with .Net environment
+
 (1),Demo environment uses centos7 operating system, install .net 7.0SDK
 ···
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
