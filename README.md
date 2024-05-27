@@ -4,7 +4,9 @@
 
 
 To jump to the [JFrog Repo Create Docs](#[Create Nuget Remote Repo](https://jfrog.com/help/r/jfrog-artifactory-documentation/set-up-remote-nuget-repositories).
-[Video]((https://youtu.be/fZHRGp44d5A))
+<iframe width="560" height="315" src="https://youtu.be/fZHRGp44d5A" frameborder="0" allowfullscreen></iframe>
+
+
 2，Install the JFrog CLI tool in a system with .Net environment
 
 (1),Demo environment uses centos7 operating system, install .net 7.0SDK
