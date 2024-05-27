@@ -1,9 +1,11 @@
 
 1，Create nuget remote repo in JFrog Server
 
+![Create Remote Nuget repo](images/1.1.jpg)
+![Create Remote Nuget repo](images/1.2.jpg)
+![Create Remote Nuget repo](images/1.3.jpg)
 
-
-To jump to the [JFrog Repo Create Docs](#[Create Nuget Remote Repo](https://jfrog.com/help/r/jfrog-artifactory-documentation/set-up-remote-nuget-repositories).
+To jump to the [JFrog Repo Create Docs][Create Nuget Remote Repo](https://jfrog.com/help/r/jfrog-artifactory-documentation/set-up-remote-nuget-repositories).
 
 
 
