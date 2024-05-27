@@ -1,12 +1,18 @@
 
-1，Install the jfrog cli tool in a system with .Net environment
+1，Create nuget remote repo in JFrog Server
+
+
+
+To jump to the [JFrog Repo Create Docs](#[Create Nuget Remote Repo](https://jfrog.com/help/r/jfrog-artifactory-documentation/set-up-remote-nuget-repositories).
+[Video]((https://youtu.be/fZHRGp44d5A))
+2，Install the JFrog CLI tool in a system with .Net environment
 
 (1),Demo environment uses centos7 operating system, install .net 7.0SDK
-···
+```
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
 sudo yum update
 sudo yum install -y dotnet-sdk-7.0
-···
+```
 
 (2),Install JFrog CLI
 ```
@@ -19,9 +25,6 @@ sudo mv jfrog-cli.repo /etc/yum.repos.d/;
 yum install -y jfrog-cli-v2-jf;
 ```
 To jump to the [JFrog CLI Installation Docs](#[JFrog CLI installation](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/install)).
-
-2，Create nuget remote repo in JFrog environment
-
 
 3，Set up JFrog CLI to connect to the JFrog 
 ```
