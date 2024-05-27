@@ -75,6 +75,7 @@ git clone https://github.com/JFrogChina/dotnet-build-sbom-demo.git
 
 
 8，Setup JFrog Xray index
+
 （1），Turn on Xray index for  build info 
 
 ![Trun on Xray index for build-info](images/8.1.jpg)
