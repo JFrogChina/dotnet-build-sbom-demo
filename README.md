@@ -1,4 +1,4 @@
-## This is a C# demo project. This project downloads nuget dependency packages through Artifactory Server through the jf command line, uploads the build dependency information to JFrog, scans the dependency packages through JFrog Xray, and obtains the SBOM report.
+## This is a C# demo project. This project downloads nuget dependency packages from Artifactory Server through the "jf command line", uploads the build dependences information to JFrog, using JFrog Xray scans the dependency packages , and obtains the SBOM report.
 
 
 # 1，Create nuget remote repo in JFrog Server
