@@ -13,7 +13,7 @@
 
 # 2，Install the JFrog CLI tool in a system with .Net environment
 
-## Centos 7
+## 1),Centos 7
 
 ### (1),Demo environment uses centos7 operating system, install .net 7.0SDK
 ```
@@ -34,7 +34,7 @@ yum install -y jfrog-cli-v2-jf;
 ```
 #### JFrog CLI Installation Docs:[JFrog CLI installation](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/install).
 
-## Mac
+## 2),Mac
 
 ### (1),Demo environment uses Mac operating system, install .net SDK
 ```
