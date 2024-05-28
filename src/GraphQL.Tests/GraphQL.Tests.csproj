@@ -24,4 +24,8 @@
     <PackageReference Include="System.Reactive" Version="6.*" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
 </Project>
