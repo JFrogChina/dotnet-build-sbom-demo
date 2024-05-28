@@ -32,7 +32,7 @@ yum install -y jfrog-cli-v2-jf;
 ```
 #### JFrog CLI Installation Docs:[JFrog CLI installation](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/install).
 
-# 3，Set up JFrog CLI to connect to the JFrog 
+# 3，Set up JFrog CLI to connect to JFrog Server
 ```
 jf c add
 #Enter a unique server identifier:jfrogname
