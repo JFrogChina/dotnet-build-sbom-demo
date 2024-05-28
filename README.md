@@ -13,14 +13,16 @@
 
 # 2，Install the JFrog CLI tool in a system with .Net environment
 
-## (1),Demo environment uses centos7 operating system, install .net 7.0SDK
+## Centos 7
+
+### (1),Demo environment uses centos7 operating system, install .net 7.0SDK
 ```
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
 sudo yum update
 sudo yum install -y dotnet-sdk-7.0
 ```
 
-## (2),Install JFrog CLI
+### (2),Install JFrog CLI
 ```
 echo "\[jfrog-cli\]" > jfrog-cli.repo;
 echo "name=jfrog-cli" >> jfrog-cli.repo;
@@ -30,6 +32,20 @@ rpm --import https://releases.jfrog.io/artifactory/jfrog-gpg-public/jfrog\_publi
 sudo mv jfrog-cli.repo /etc/yum.repos.d/;
 yum install -y jfrog-cli-v2-jf;
 ```
+#### JFrog CLI Installation Docs:[JFrog CLI installation](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/install).
+
+## Mac
+
+### (1),Demo environment uses Mac operating system, install .net SDK
+```
+#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install --cask dotnet-sdk
+```
+### (2),Install JFrog CLI
+```
+brew install jfrog-cli
+```
+
 #### JFrog CLI Installation Docs:[JFrog CLI installation](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/install).
 
 # 3，Set up JFrog CLI to connect to JFrog Server
