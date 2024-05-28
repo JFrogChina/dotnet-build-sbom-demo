@@ -17,6 +17,7 @@
 
 ### (1),Demo environment uses centos7 operating system, install .net 7.0SDK
 ```
+# install dotnet-sdk
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
 sudo yum update
 sudo yum install -y dotnet-sdk-7.0
@@ -24,6 +25,7 @@ sudo yum install -y dotnet-sdk-7.0
 
 ### (2),Install JFrog CLI
 ```
+# install jfrog cli with yum
 echo "\[jfrog-cli\]" > jfrog-cli.repo;
 echo "name=jfrog-cli" >> jfrog-cli.repo;
 echo "baseurl=https://releases.jfrog.io/artifactory/jfrog-rpms" >> jfrog-cli.repo;
@@ -38,11 +40,14 @@ yum install -y jfrog-cli-v2-jf;
 
 ### (1),Demo environment uses Mac operating system, install .net SDK
 ```
-#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# install Homebrew,If it is already installed in your env, you can ignore the next command.
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# install dotnet-sdk
 brew install --cask dotnet-sdk
 ```
 ### (2),Install JFrog CLI
 ```
+# install jfrog cli
 brew install jfrog-cli
 ```
 
