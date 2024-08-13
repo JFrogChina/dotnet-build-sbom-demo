@@ -52,12 +52,11 @@ jf dotnetc --global
 ```
 #### JFrog CLI Nuget build Docs:[JFrog CLI Nuget Env setup](https://docs.jfrog-applications.jfrog.io/jfrog-applications/jfrog-cli/cli-for-jfrog-artifactory/package-managers-integration#building-nuget-packages)).
 
-# 5，Clone .net project source code
+# 5，Clone the .net project source code
 
 ```
 #Create a working directory and clone the code
-mkdir  ~/dotnet_work
-cd ~/dotnet_work
+
 git clone https://github.com/JFrogChina/dotnet-build-sbom-demo.git
 ```
 
